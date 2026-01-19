@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+    <h2>Customer Churn Prediction System</h2>
+
+    <form action="/predict" method="post">
+
+        Age: <input type="number" name="Age" required><br><br>
+        Tenure: <input type="number" name="Tenure" required><br><br>
+        Usage Frequency: <input type="number" name="Usage Frequency" required><br><br>
+        Support Calls: <input type="number" name="Support Calls" required><br><br>
+        Payment Delay: <input type="number" name="Payment Delay" required><br><br>
+        Total Spend: <input type="number" name="Total Spend" required><br><br>
+        Last Interaction: <input type="number" name="Last Interaction" required><br><br>
+
+        Gender:
+        <select name="Gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select><br><br>
+
+        Subscription Type:
+        <select name="Subscription Type">
+            <option value="0">Basic</option>
+            <option value="1">Standard</option>
+            <option value="2">Premium</option>
+        </select><br><br>
+
+        Contract Length:
+        <select name="Contract Length">
+            <option value="0">Monthly</option>
+            <option value="1">Quarterl0y</option>
+            <option value="2">Annual</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction }}</h3>
+
+</body>
+</html>
